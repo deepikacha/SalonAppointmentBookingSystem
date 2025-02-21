@@ -1,0 +1,27 @@
+const express = require('express');
+const router = express.Router();
+const adminController = require('../../controllers/admin/adminController');
+const feedbackController = require('../../controllers/admin/responseController.js');
+const {Authorize}=require('../../middleware/EmployeeAuth');
+
+router.post('/signup', adminController.createAdminProfile);
+// router.post('/signup', (req,res)=>{
+//     console.log("hello");
+//     res.send("hi")
+// });
+router.post('/login',adminController.loginAdminProfile);
+
+router.post('/submit-response',Authorize, feedbackController.submitResponse);
+router.get('/employee-profile',Authorize,adminController.fetchEmployeeDetails);
+// router.get('/employee-profile',(req,res)=>{
+//     console.log("employee");
+//     res.send("hi");
+// });
+router.put('/update-profile',Authorize,adminController.updateEmployeeDetails);
+// router.put('/update-profile',(req,res)=>{
+//     console.log()
+//     console.log()
+//     console.log("employee");
+//     res.send("hi");
+// });
+module.exports = router;

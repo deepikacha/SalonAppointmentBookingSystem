@@ -1,0 +1,89 @@
+
+
+const AdminProfile=require('../../models/EmployeeProfile');
+const bcrypt=require('bcryptjs');
+const {generateToken}=require('../../util/jwt');
+
+exports.fetchEmployeeDetails=async(req,res)=>{
+    try{
+        
+        const {id:employeeId}=req.user;
+       
+        const employeeProfile=await AdminProfile.findByPk(employeeId);
+      
+       
+        if(!employeeProfile){
+            return res.status(404).json({message:"employee not found"});
+        }
+         res.status(200).json(employeeProfile);
+
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+
+exports.updateEmployeeDetails=async(req,res)=>{
+    try{
+        const {id:employeeId}=req.user;
+        const{name,services,email}=req.body;
+       
+        console.log(req.body);
+        const employeeProfile=await AdminProfile.findByPk(employeeId);
+        if(!employeeId){
+           return res.status(404).json({message:"employee not found"})
+        }
+        if(name) employeeProfile.name=name;
+        if(services) employeeProfile.services=JSON.stringify(services);
+        if(email) employeeProfile.email=email;
+        await employeeProfile.save();
+        res.status(200).json({message:"employee details updated successfully"})
+
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+    
+exports.createAdminProfile=async(req,res)=>{
+    
+    try{
+   
+    const { name,services,email,password}=req.body;
+   
+    const string=JSON.stringify(services)
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const newAdminProfile=await AdminProfile.create({name,services:string,email,password: hashedPassword})
+    res.status(201).json({adminProfile:newAdminProfile});
+    }
+    catch(err){
+        console.log(err.message)
+    res.status(500).json({err:err.message});
+    }
+
+}
+
+exports.loginAdminProfile=async(req,res)=>{
+    try{
+        const {email,password}=req.body;
+       
+        const admin = await AdminProfile.findOne({ where: { email } });
+
+        if (!admin) {
+            return res.status(404).json({ message: "User not found. Please sign up." });
+        }
+
+        const isValidPassword = await bcrypt.compare(password, admin.password);
+        if (!isValidPassword) {
+            return res.json({ message: "Incorrect password" });
+        }
+        const token = generateToken(admin.id);
+        console.log(token);
+         res.status(200).json({ userProfile: admin, token ,employeeId: admin.id,});
+        
+    }
+    catch(err){
+        res.json({ error: err.message });
+    }
+}
+
