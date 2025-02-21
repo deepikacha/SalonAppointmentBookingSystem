@@ -1,0 +1,186 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+ nav h1{
+  color:white;
+ }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #fff;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  li button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  li button:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+  
+  nav h1 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  nav button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  nav button:hover {
+    background-color: #45a049;
+  }
+
+  nav .add-slot-btn {
+    margin-left: 800px; /* Create the gap */
+  }
+
+  nav .profile {
+    padding: 5px 10px; /* Reduce padding */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+nav .profile:hover {
+    background-color: #0056b3;
+}
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form input,
+  form textarea {
+    margin-bottom: 12px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Review Form */
+  textarea {
+    resize: vertical;
+    width: 100%;
+    max-height: 150px;
+  }
+  
+  /* Add Slot Form */
+  .add-slot-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  
+  .add-slot-form input {
+    margin-bottom: 10px;
+  }
+  
+  .add-slot-form button {
+    margin-top: 10px;
+  }
+  
+  /* Slot List Styling */
+  .available-slots ul {
+    padding: 0;
+  }
+  
+  .available-slots li {
+    background-color: #f9f9f9;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .available-slots button {
+    background-color: #f44336;
+  }
+  
+  .available-slots button:hover {
+    background-color: #d32f2f;
+  }
+  

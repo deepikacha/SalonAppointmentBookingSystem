@@ -1,0 +1,99 @@
+/* Global reset for margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container styling for the user form */
+.UserContainer {
+    background: linear-gradient(to right, blue, pink, purple);
+    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+.UserContainer h2 {
+    padding: 20px 0 30px;
+    font-size: 2em;
+    text-align: center;
+    color: black;
+}
+
+/* Form styling */
+.UserForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Lighten the form background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Label styling */
+label {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Input styling */
+input {
+    padding: 10px;
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    background: white; /* Use a white background for inputs */
+}
+
+/* Focus effect for input fields */
+input:focus {
+    outline: 2px solid rgb(140, 181, 252);
+}
+
+/* Submit button styling */
+button.submit {
+    padding: 10px;
+    font-size: 1.2em;
+    background: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* Submit button hover effect */
+button.submit:hover {
+    background: #45a049;
+}
+
+/* Link styling */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #3e4ad3;
+    text-decoration: none;
+}
+
+/* Link hover effect */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .UserContainer {
+        margin: 20px;
+        padding: 20px;
+    }
+}

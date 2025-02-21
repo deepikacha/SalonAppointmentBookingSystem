@@ -1,0 +1,99 @@
+/* Global reset for margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Form container styling */
+.form-container {
+    background: linear-gradient(to right, blue, yellow);
+    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.form-title {
+    padding: 20px 0 30px;
+    font-size: 2em;
+    text-align: center;
+    color: yellow;
+}
+
+/* Admin form styling */
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: linear-gradient(to right, blue, yellow); /* Add gradient here */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Label styling */
+.form-container label {
+    font-size: 1.2em;
+    color:black;
+}
+
+/* Input field styling */
+.input-field {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+/* Focus effect for input fields */
+.input-field:focus {
+    outline: 2px solid rgb(140, 181, 252);
+}
+
+/* Checkbox styling */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-input {
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox-label {
+    font-size: 1em;
+    color: black;
+}
+
+/* Submit button styling */
+.submit-btn {
+    padding: 10px;
+    font-size: 1.2em;
+    background: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* Submit button hover effect */
+.submit-btn:hover {
+    background: #45a049;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .form-container {
+        margin: 20px;
+        padding: 20px;
+    }
+}

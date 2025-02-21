@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #cfcfcf;
+}
+
+/* Container for the admin form */
+.Admincontainer {
+  background: #fff;
+  height: auto;
+  margin: 10vh auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading for the form */
+.AdminHeading {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styling for the form */
+.Adminform {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Email container */
+.AdminemailContainer,
+.passwordContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Labels */
+.AdminemailContainer label,
+.passwordContainer label {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Inputs */
+.AdminemailContainer input,
+.passwordContainer input {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.AdminemailContainer input:focus,
+.passwordContainer input:focus {
+  outline: 2px solid rgb(140, 181, 252);
+}
+
+/* Submit button */
+.submit {
+  padding: 10px;
+  font-size: 1.2em;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+  background: #45a049;
+}
+
+/* Link to sign in */
+.signin-button {
+  display: inline-block;
+  text-align: center;
+  font-size: 1em;
+  color: #3e4ad3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.signin-button:hover {
+  color: #293b9b;
+}
+
+/* Media queries for responsiveness */
+@media screen and (min-width: 768px) {
+  .Admincontainer {
+    margin: 5vh auto;
+    width: 60%;
+  }
+}
